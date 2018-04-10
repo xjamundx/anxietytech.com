@@ -1,11 +1,11 @@
 html {
   font-family: helvetica neue, Helvetica, sans-serif, Arial;
   padding: 0;
-  background: black;
-  color: white;
 }
 
 body {
+  background: white;
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -14,8 +14,8 @@ nav {
   text-align: center;
   position: sticky;
   width: 100%;
-  background: black;
   top: 0;
+  background: rgba(15, 3, 104, 0.76);
 }
 
 h1 {
@@ -39,20 +39,20 @@ h3 {
   margin-left: 1em;
 }
 
-a {
+nav a {
   letter-spacing: 0.25em;
   font-weight: 300;
   font-family: helvetica neue, Helvetica, sans-serif, Arial;
   text-transform: uppercase;
   flex: 1;
-  color: #ff0000;
+  color: #bbb;
   text-decoration: none;
   display: inline-block;
   padding: 1em;
 }
 
-a:hover {
-  color: darkgray;
+nav a:hover {
+  color: lightgray;
 }
 
 .halfsies {
@@ -88,49 +88,65 @@ a:hover {
 }
 
 .body {
+  background: white;
   font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
   margin: 0 auto;
   flex: 1;
 }
 
-.band {
-  background: black;
-  text-align: center;
-  color: white;
-  padding: 0.5em;
-  padding-bottom: 800px;
+.body a {
+  color: #0e0369;
+  text-shadow: 1px 1px 4px darkgray;
+}
+
+.body a:hover {
+  text-shadow: 1px 1px 5px gray;
 }
 
 .page::before {
   height: 180px;
-  background: black;
+  background: #0e0369;
   width: 100%;
   display: block;
   content: "x";
-  color: black;
+  color: #0e0369;
   position: absolute;
   z-index: -1;
 }
 
 .page > .body {
-  height: 800px;
+  color: #333;
+  min-height: 400px;
 }
 
 .split {
   column-count: 2;
 }
 
+.home {
+  background: #0e0369;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.date {
+  font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
+}
 .about {
   margin: 2em auto;
   padding: 0 2em;
   font-size: 1.3em;
 }
 
+/* speakers */
+
 .speakers {
   padding: 1em;
   column-count: 2;
 }
-
 
 .speaker-img {
   width: 200px;
@@ -140,14 +156,14 @@ a:hover {
   float: left;
 }
 
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   .speakers {
     column-count: 1;
     padding: 1em;
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .speaker-img {
     width: 140px;
     height: 140px;
@@ -159,27 +175,43 @@ a:hover {
 
 .speaker {
   display: inline-block;
-
 }
 
 .speaker-name {
+  color: #0e0369;
   display: block;
 }
 
 .speaker-desc {
   font-size: 22x;
+  color: #333;
   font-family: helvetica neue, Helvetica, sans-serif, Arial;
+}
+
+.speaker-more {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 5em;
 }
 
 /* venue */
 
+.venue {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+#venue > h2 {
+  margin-bottom: -12px;
+}
 
 .venue-pics {
   height: 500px;
   display: flex;
 }
 
-.venue-pics>.col {
+.venue-pics > .col {
   flex: 1;
   width: 0;
 }
