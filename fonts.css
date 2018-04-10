@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "League Gothic";
+  src: url("fonts/leaguegothic-regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("fonts/leaguespartan-bold-webfont.woff") format("woff");
+}

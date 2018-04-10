@@ -1,0 +1,124 @@
+html {
+  font-family: helvetica neue, Helvetica, sans-serif, Arial;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background: black;
+  bottom: 0;
+}
+
+h1 {
+  font-weight: 200;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+h2 {
+  color: white;
+  font-family: "League Gothic", helvetica neue, Helvetica, sans-serif, Arial;
+  font-size: 2.8em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: calc(180px - 1em + 1px);
+  margin-top: 0;
+}
+
+h3 {
+  margin-left: 1em;
+}
+
+a {
+  letter-spacing: 0.25em;
+  font-weight: 300;
+  font-family: helvetica neue, Helvetica, sans-serif, Arial;
+  text-transform: uppercase;
+  flex: 1;
+  color: #ff0000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+}
+
+a:hover {
+  color: darkgray;
+}
+
+.halfsies {
+  background: linear-gradient(
+    to right,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(219, 219, 219, 1) 50%,
+    rgba(209, 209, 209, 1) 51%,
+    rgba(254, 254, 254, 1) 100%
+  );
+}
+
+.flexy {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 2em auto;
+  display: block;
+}
+
+.white {
+  background: white;
+}
+
+.info {
+  font-family: "League Gothic", helvetica neue, Helvetica, sans-serif, Arial;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.body {
+  font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.band {
+  background: black;
+  text-align: center;
+  color: white;
+  padding: 0.5em;
+  padding-bottom: 800px;
+}
+
+.page::before {
+  height: 180px;
+  background: black;
+  width: 100%;
+  display: block;
+  content: "x";
+  position: absolute;
+  z-index: -1;
+}
+
+.page > .body {
+  height: 800px;
+}
+
+.split {
+  column-count: 2;
+}
+
+.about {
+  margin: 2em auto;
+  padding: 0 2em;
+  font-size: 1.3em;
+}
