@@ -18,6 +18,17 @@ nav {
   background: rgba(15, 3, 104, 0.76);
 }
 
+.mim {
+  height: 150px;
+}
+.twitter {
+  position: absolute;
+  right: 10px;
+}
+.twitter > img {
+  height: 22px;
+}
+
 h1 {
   font-weight: 200;
   letter-spacing: 0.25em;
@@ -88,6 +99,7 @@ nav a:hover {
 }
 
 .body {
+  overflow: hidden;
   background: white;
   font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
   margin: 0 auto;
@@ -96,11 +108,13 @@ nav a:hover {
 
 .body a {
   color: #0e0369;
-  text-shadow: 1px 1px 4px darkgray;
+  /* text-shadow: 1px 1px 4px darkgray; */
 }
 
 .body a:hover {
-  text-shadow: 1px 1px 5px gray;
+  color: #0e0369;
+  opacity: 0.8;
+  /* text-shadow: 1px 1px 5px gray; */
 }
 
 .page::before {
