@@ -188,7 +188,7 @@ nav a:hover {
 }
 
 .speaker {
-  display: inline-block;
+  display: flex;
 }
 
 .speaker-name {
