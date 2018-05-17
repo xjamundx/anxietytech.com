@@ -187,8 +187,23 @@ nav a:hover {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .speaker-img {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+  }
+  nav {
+    display: none;
+    font-size: 39px;
+    position: static;
+  }
+}
+
 .speaker {
   display: flex;
+  page-break-inside: avoid;
 }
 
 .speaker-name {
@@ -234,4 +249,52 @@ nav a:hover {
   max-height: 500px;
   flex: 1;
   margin-right: 1em;
+}
+
+/* schedule */
+
+.schedule {
+  margin: 0 auto;
+  border: 1px solid black;
+  font-size: 1.2em;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th,
+tr,
+td {
+  text-align: left;
+  padding: 1em;
+  border-top: 1px solid gray;
+}
+
+td:first-of-type {
+  padding: 0 20px;
+}
+
+tr.break {
+  background: #ccc;
+}
+
+.register {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 0.3em 1em 0.3em 1em;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(229, 229, 229, 1) 100%
+  );
+}
+
+.register:hover {
+  background: linear-gradient(
+    to bottom,
+    rgb(254, 255, 255) 0%,
+    rgba(180, 180, 211, 1) 100%
+  );
 }
