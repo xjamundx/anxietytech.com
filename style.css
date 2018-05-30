@@ -4,8 +4,7 @@ html {
 }
 
 body {
-  background: white;
-  color: #333;
+  background: linear-gradient(to right, red, yellow);
   margin: 0;
   padding: 0;
 }
@@ -15,7 +14,7 @@ nav {
   position: sticky;
   width: 100%;
   top: 0;
-  background: rgba(15, 3, 104, 0.76);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .mim {
@@ -42,14 +41,36 @@ h1 {
   font-size: 14px;
 }
 
+h2.tight {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+h2.large {
+  padding: 1em 0;
+}
+
+h2.pretty {
+  background: linear-gradient(to right, red, yellow);
+  color: rgba(255, 255, 255, 0.7);
+}
+
 h2 {
-  color: white;
+  color: navy;
   font-family: "League Gothic", helvetica neue, Helvetica, sans-serif, Arial;
   font-size: 2.8em;
   text-align: center;
   text-transform: uppercase;
-  padding-top: calc(180px - 1em + 1px);
-  margin-top: 0;
+  /* padding-top: calc(180px - 1em + 1px);
+  margin-top: 0; */
+}
+
+.page.fullbleed {
+  background: inherit;
+}
+
+.fullbleed h2 {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 h3 {
@@ -62,14 +83,14 @@ nav a {
   font-family: helvetica neue, Helvetica, sans-serif, Arial;
   text-transform: uppercase;
   flex: 1;
-  color: #bbb;
+  color: black;
   text-decoration: none;
   display: inline-block;
   padding: 1em;
 }
 
 nav a:hover {
-  color: lightgray;
+  color: red;
 }
 
 .halfsies {
@@ -106,32 +127,24 @@ nav a:hover {
 
 .body {
   overflow: hidden;
-  background: white;
   font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
   margin: 0 auto;
   flex: 1;
 }
 
 .body a {
-  color: #0e0369;
+  color: #000;
   /* text-shadow: 1px 1px 4px darkgray; */
 }
 
 .body a:hover {
-  color: #0e0369;
+  color: #333;
   opacity: 0.8;
   /* text-shadow: 1px 1px 5px gray; */
 }
 
-.page::before {
-  height: 180px;
-  background: #0e0369;
-  width: 100%;
-  display: block;
-  content: "x";
-  color: #0e0369;
-  position: absolute;
-  z-index: -1;
+.page {
+  background: white;
 }
 
 .page > .body {
@@ -144,8 +157,8 @@ nav a:hover {
 }
 
 .home {
-  background: #0e0369;
   color: white;
+  padding-bottom: 4em;
 }
 
 .center {
@@ -153,12 +166,20 @@ nav a:hover {
 }
 
 .date {
-  font-family: "League Spartan", helvetic neue, Helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 .about {
   margin: 2em auto;
   padding: 0 2em;
   font-size: 1.3em;
+}
+.about.dark {
+  color: #333;
+}
+
+.about.light {
+  font-weight: 300;
 }
 
 /* speakers */
@@ -203,6 +224,9 @@ nav a:hover {
     display: none;
     font-size: 39px;
     position: static;
+  }
+  .schedule-info > td:last-child:after {
+    display: none;
   }
 }
 
@@ -260,7 +284,7 @@ nav a:hover {
 
 .schedule {
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: 1.2em;
   border-spacing: 0;
   border-collapse: collapse;
@@ -271,7 +295,7 @@ tr,
 td {
   text-align: left;
   padding: 1em;
-  border-top: 1px solid gray;
+  /* border-top: 1px solid gray; */
 }
 
 td:first-of-type {
@@ -279,7 +303,8 @@ td:first-of-type {
 }
 
 tr.break {
-  background: #ccc;
+  /* background: #ccc; */
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .register {
@@ -302,4 +327,50 @@ tr.break {
     rgb(254, 255, 255) 0%,
     rgba(180, 180, 211, 1) 100%
   );
+}
+
+table.schedule {
+  max-width: 800px;
+}
+
+.schedule-abstract {
+  max-height: 0;
+  transition: padding, max-height 0.33s ease-out;
+  overflow: hidden;
+  font-weight: 300;
+  text-align: justify;
+  margin: 0;
+}
+
+.schedule-detail:hover .schedule-abstract,
+.schedule-info:hover + .schedule-detail .schedule-abstract {
+  max-height: 500px;
+  transition: max-height 0.33s ease-in;
+}
+
+.schedule-info > td:last-child:after {
+  padding-left: 1em;
+  position: absolute;
+  content: "💻";
+}
+
+/* page orders */
+
+#home {
+  order: 1;
+}
+#schedule {
+  order: 3;
+}
+#speakers {
+  order: 2;
+}
+#about {
+  order: 5;
+}
+#venue {
+  order: 4;
+}
+#conduct {
+  order: 6;
 }
