@@ -374,3 +374,25 @@ table.schedule {
 #conduct {
   order: 6;
 }
+
+/* signup */
+
+#mc_embed_signup input.email {
+  font-size: 1.3em;
+  height: auto;
+  padding: 0.3em;
+}
+
+#mc_embed_signup .button {
+  font-size: 1.3em;
+  height: auto;
+  padding: 0.3em;
+  line-height: inherit;
+  border: 1px solid white;
+  background: none;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* color: #f44336; */
+}
