@@ -196,40 +196,6 @@ nav a:hover {
   margin: 0 2em 2em;
 }
 
-@media (max-width: 1024px) {
-  .speakers {
-    column-count: 1;
-    padding: 1em;
-  }
-}
-
-@media (max-width: 768px) {
-  .speaker-img {
-    width: 140px;
-    height: 140px;
-  }
-  .speaker-desc {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .speaker-img {
-    display: none;
-  }
-  .logo {
-    width: 100%;
-  }
-  nav {
-    display: none;
-    font-size: 39px;
-    position: static;
-  }
-  .schedule-info > td:last-child:after {
-    display: none;
-  }
-}
-
 .speaker {
   display: flex;
   page-break-inside: avoid;
@@ -306,7 +272,7 @@ tr.break {
   /* background: #ccc; */
   background: rgba(255, 255, 255, 0.3);
 }
-
+/* 
 .register {
   color: white;
   font-size: 1.5em;
@@ -327,6 +293,26 @@ tr.break {
     rgb(254, 255, 255) 0%,
     rgba(180, 180, 211, 1) 100%
   );
+} */
+
+a.register {
+  font-size: 1.3em;
+  height: auto;
+  line-height: inherit;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  text-shadow: none;
+  border-radius: 8em;
+  border-width: 2px;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  transition: all 0.33s ease-out;
+}
+
+a.register:hover {
+  color: #333;
+  border-color: #333;
 }
 
 table.schedule {
@@ -360,10 +346,10 @@ table.schedule {
   order: 1;
 }
 #schedule {
-  order: 3;
+  order: 2;
 }
 #speakers {
-  order: 2;
+  order: 3;
 }
 #about {
   order: 5;
@@ -395,4 +381,64 @@ table.schedule {
 #mc_embed_signup .button:hover {
   background-color: rgba(255, 255, 255, 0.5);
   /* color: #f44336; */
+}
+
+/* media queries */
+
+.mo {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .speakers {
+    column-count: 1;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .speaker-img {
+    width: 140px;
+    height: 140px;
+  }
+  .speaker-desc {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .nomo {
+    display: none;
+  }
+  .home {
+    padding: 0 1em;
+  }
+  .mo {
+    display: block;
+  }
+  .speaker-img {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+  }
+  nav {
+    display: none;
+    font-size: 39px;
+    position: static;
+  }
+  .schedule-info > td:last-child:after {
+    display: none;
+  }
+}
+
+
+.banner {
+  color: black;
+  padding: 1em 0;
+  width: auto;
+}
+
+.banner > a {
+  color: black;
 }
